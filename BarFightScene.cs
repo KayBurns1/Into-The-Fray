@@ -34,7 +34,7 @@ public class BarFightScene : MonoBehaviour
 
     StoryBlock currentBlock; //keeps track of where the story currently is
 
-    //blocks 1-10 tell the story
+    //blocks 0-17 tell the story
     static StoryBlock block13 = new StoryBlock("You try to talk to them but they hit you over the head with some sort of club, which is the last thing you see before crumpling to the ground."); 
     static StoryBlock block12 = new StoryBlock("You decide you don't want to fight anymore. You turn and run, but they sweep you off your feet and you hit the ground face first. The last thing you remember is getting on all fours, then a thump on your head.");
     static StoryBlock block17 = new StoryBlock("No matter what you try to do, you cannot escape his death grip on your hand. Someone else hits you on the head from behind, and the last thing you see is his smirk, knowing he won.");
@@ -52,11 +52,11 @@ public class BarFightScene : MonoBehaviour
     static StoryBlock block4 = new StoryBlock("You ignore them. The figure shouts again.", block5, block3, block3); 
     static StoryBlock block2 = new StoryBlock("You don't feel like fighting right now.", block4, block3, block2); 
     static StoryBlock block1 = new StoryBlock("You approach the figure. You decide to introduce yourself. They say nothing. After a bit you walk away when they shout at you again.", block4, block3, block2);
-
+    static StoryBlock block0 = new StoryBlock("Left click the choice that you want to make, where you either fight, try to take action, or flee. Click and of the buttons to start.", block1, block1, block1);
 
     void Start()
     {
-        DisplayBlock(block1); //when the game first starts, display block 1
+        DisplayBlock(block0); //when the game first starts, display block 1
     }
     
     //this function is how any block gets displayed
