@@ -38,5 +38,9 @@ public class mainMovemen : MonoBehaviour
             Vector3 increment = new Vector3(0.01f, 0, 0);
             player.transform.position = player.transform.position + increment;
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+        SceneManager.LoadScene("PauseMenu");
+        }
     }
 }
