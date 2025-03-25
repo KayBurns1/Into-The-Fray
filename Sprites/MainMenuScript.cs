@@ -14,4 +14,9 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("SC Demo");
     }
+
+    public void Settings()
+{
+    SceneManager.LoadScene("Settings");
+}
 }
