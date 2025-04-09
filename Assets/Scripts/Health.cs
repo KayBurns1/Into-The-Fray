@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     }
 
     //amount is sent from enemy script
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)
@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    void Heal(int gain)
+    public void Heal(int gain)
     {
         currentHealth += gain;
         if (currentHealth > maxHealth)
