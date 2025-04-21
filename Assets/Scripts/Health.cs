@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+
+    public GameObject popUpPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,9 @@ public class Health : MonoBehaviour
     //amount is sent from enemy script
     public void TakeDamage(int damage)
     {
+        GameObject popUp = Instantiate(popUpPrefab, transform.position, Quaternion.identity);
+        popUp.GetComponentInChildren<TextMesh>().text = damage.ToString();
+
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
