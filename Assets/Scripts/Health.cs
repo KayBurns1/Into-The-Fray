@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+
+    public EnemySpawner spawn;
 
     public GameObject popUpPrefab;
     // Start is called before the first frame update
@@ -27,6 +30,9 @@ public class Health : MonoBehaviour
             //dead
             //play death animation
             //show game over screen?????
+            spawn.fight = false;
+            //maybe reset the interval timers?????
+            SceneManager.LoadScene("GameOver");
         }
     }
 
