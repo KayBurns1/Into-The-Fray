@@ -8,6 +8,9 @@ public class EnemyHealth : MonoBehaviour
     public GameObject FloatingText;
     public int maxHealth;
     public int currentHealth;
+    public int killCount = 0;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             //maybe play death animation????
+            killCount++;
             return;
         }
     }
