@@ -30,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             //maybe play death animation????
+            Destroy(gameObject);
             killCount++;
             return;
         }
