@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc75a0774723d4c6483c269a193db4ff
+guid: f756bcf1526b27c47bcb74d8ba55b4a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1915574304841541468
-    second: Frey_forward_facing_0
+      213: -1849007456515201381
+    second: frey, walk 3 flipped_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frey_forward_facing_0
+      name: frey, walk 3 flipped_0
       rect:
         serializedVersion: 2
         x: 19
         y: 7
-        width: 61
+        width: 59
         height: 92
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c5722fc5eac759a10800000000000000
-      internalID: 1915574304841541468
+      spriteID: b96ec57c3810756e0800000000000000
+      internalID: -1849007456515201381
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Frey_forward_facing_0: 1915574304841541468
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
