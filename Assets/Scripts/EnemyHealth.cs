@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public GameObject FloatingText;
+    private GameObject FloatingText;
     public int maxHealth;
     public int currentHealth;
-    public int killCount = 0;
+
+    public GameOver end;
 
     
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
         {
             //maybe play death animation????
             Destroy(gameObject);
-            killCount++;
+            end.currentScore += 1;
             return;
         }
     }
