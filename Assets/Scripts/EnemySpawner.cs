@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    //enemy objects
     [SerializeField]
     private GameObject swordSwarmer;
     [SerializeField]
@@ -27,14 +28,14 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(spawnEnemy(swordSwarmerInterval, swordSwarmer));
-        //StartCoroutine(spawnEnemy(rangedSwarmerInterval, rangedSwarmer));
+        //set the spawning interval to 10 and 15
         swordSwarmerInterval = 10f;
         rangedSwarmerInterval = 15f;
     }
 
     private void Update()
     {
+        //makes sure the enemies spawn only after player does dialogue scene
         if (bfs.dialogueCompleted)
         {
             bfs.dialogueCompleted = false;
@@ -46,8 +47,10 @@ public class EnemySpawner : MonoBehaviour
 
         while (fight)
         {
+            //keep increasing count var while fighting is happening
             count += Time.deltaTime;
 
+            //decease spawning interval to make enemies spawn faster when count is equal to countdown
             if (count >= countdown)
             {
                 swordSwarmerInterval -= .1f;
@@ -58,8 +61,7 @@ public class EnemySpawner : MonoBehaviour
 
     }
 
-    //create update function to start coroutine if dialogueCompleted == true
-
+    //coroutine to continuously spawn enemies
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
         //how long it takes before spawning a new enemy
