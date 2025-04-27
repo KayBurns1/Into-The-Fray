@@ -7,24 +7,24 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
     public Button Restart;
-    public EnemyHealth em;
     public int highScore;
+    public int currentScore;
     public Text highScoreDisplay;
     public Text currentScoreDisplay;
 
     public void Start()
     {
-        if (em.killCount >= highScore)
+        if (currentScore >= highScore)
         {
-            highScore = em.killCount;
+            highScore = currentScore;
             highScoreDisplay.text = "High Score : " + highScore.ToString();
-            currentScoreDisplay.text = "Current Score : " + em.killCount.ToString();
-            em.killCount = 0;
+            currentScoreDisplay.text = "Current Score : " + currentScore.ToString();
+            currentScore = 0;
         } else
         {
             highScoreDisplay.text = "High Score : " + highScore.ToString();
-            currentScoreDisplay.text = "Current Score : " + em.killCount.ToString();
-            em.killCount = 0;
+            currentScoreDisplay.text = "Current Score : " + currentScore.ToString();
+            currentScore = 0;
         }
     }
 
