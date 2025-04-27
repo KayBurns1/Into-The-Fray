@@ -8,7 +8,8 @@ public class EnemyHealth : MonoBehaviour
     private GameObject FloatingText;
     public int maxHealth;
     public int currentHealth;
-    public GameOver end;
+
+    public Scoring score;
 
     
     // Start is called before the first frame update
@@ -31,12 +32,9 @@ public class EnemyHealth : MonoBehaviour
         {
             //maybe play death animation????
             Destroy(gameObject);
-            end.currentScore += 1;
-            Debug.Log($"Current Score: {end.currentScore}");
+            score.currentScore += 1;
             return;
         }
-        Debug.Log($"{gameObject.name}: {currentHealth} - {damage}");
-
     }
 
     void ShowFloatingText()
