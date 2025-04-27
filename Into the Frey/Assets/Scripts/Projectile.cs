@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D projectileRb;
     public float speed;
     public float projectileLife;
+    public float damage;
     private float projectileCount;
     private Vector2 moveDirection;
     
@@ -42,14 +43,36 @@ public class Projectile : MonoBehaviour
         moveDirection = direction.normalized;
     }
 
-  /*  private void OnTriggerEnter2D(Collider2D collision)
+  private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("rangedSwarmer") || collision.CompareTag("meleeSwarmer")) // Make sure your enemies are tagged as "Enemy" in the Unity Editor.
+        EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
         {
-            // Optional: damage logic here
-            // other.GetComponent<EnemyHealth>().TakeDamage(damageAmount);
-
+            enemyHealth.TakeDamage((int)damage);
             Destroy(gameObject);
         }
-    }*/
+
+        /*EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.TakeDamage(damage);
+        }
+       if (collision.CompareTag("meleeSwarmer"))
+        {
+            if (enemyHealth != null)
+            {
+             enemyHealth.TakeDamage(damage);
+            }
+            Destroy(gameObject);
+        }
+
+       if (collision.CompareTag("rangedSwarmer"))
+        {
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+            }
+            Destroy(gameObject);
+        }*/
+    }
 }

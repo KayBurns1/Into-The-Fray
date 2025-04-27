@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fray_side_view_2_0: -4121243378760289209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

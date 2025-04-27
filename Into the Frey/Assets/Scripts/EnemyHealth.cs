@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public GameObject FloatingText;
+    private GameObject FloatingText;
     public int maxHealth;
     public int currentHealth;
-    public int killCount = 0;
+    public GameOver end;
 
     
     // Start is called before the first frame update
@@ -30,9 +30,13 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             //maybe play death animation????
-            killCount++;
+            Destroy(gameObject);
+            end.currentScore += 1;
+            Debug.Log($"Current Score: {end.currentScore}");
             return;
         }
+        Debug.Log($"{gameObject.name}: {currentHealth} - {damage}");
+
     }
 
     void ShowFloatingText()
