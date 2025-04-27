@@ -39,10 +39,11 @@ public class BarFightScene : MonoBehaviour
     StoryBlock currentBlock; //keeps track of where the story currently is
 
     //blocks 0-12 tell the story
-    static StoryBlock block12 = new StoryBlock("You apologize for inconviencing them, but they weren't willing to hear you out and swung again. You must fight for your honor.");
-    static StoryBlock block11 = new StoryBlock("You try to ignore them again, but they keep swinging. This will not fly. You must fight for your honor.");
-    static StoryBlock block10 = new StoryBlock("You begrudgingly accept so this fight won't happen again.");
-    static StoryBlock block9 = new StoryBlock("You refuse because you hate fighting. They take a swing at you. You won't let this fly. You must fight for your honor, even if its the last thing you want to do.");
+    static StoryBlock block13 = new StoryBlock(" ");
+    static StoryBlock block12 = new StoryBlock("You apologize for inconviencing them, but they weren't willing to hear you out and swung again. You must fight for your honor.", block13, block13, block13);
+    static StoryBlock block11 = new StoryBlock("You try to ignore them again, but they keep swinging. This will not fly. You must fight for your honor.", block13, block13, block13);
+    static StoryBlock block10 = new StoryBlock("You begrudgingly accept so this fight won't happen again.", block13, block13, block13);
+    static StoryBlock block9 = new StoryBlock("You refuse because you hate fighting. They take a swing at you. You won't let this fly. You must fight for your honor, even if its the last thing you want to do.", block13, block13, block13);
     static StoryBlock block8 = new StoryBlock("You ignore them again. They take a swing at you.", block11, block12);
     static StoryBlock block6 = new StoryBlock("You wobble to your feet and look them in the eye. They tell you they don't know you and don't like the sight of you either. They demand a fight.", block8, block9, block10);
     static StoryBlock block5 = new StoryBlock("You ignore them again and keep walking. Suddenly, the figure shoves you to the ground!", block6, block6);
@@ -85,13 +86,12 @@ public class BarFightScene : MonoBehaviour
     public void ActionPicked()
     {
         //if dialogue is done
-        if (currentBlock == block11 || currentBlock == block9 || currentBlock == block10)
+        if (currentBlock == block13)
         {
-            //display current block
-            DisplayBlock(currentBlock.actionBlock);
-            //start coroutine to start fight
-            StartCoroutine(FightTime());
-            //Invoke("fightTime", 5);
+            //turn true to show thar the dialogue is done
+            dialogueCompleted = true;
+            //start fight scene
+            SceneManager.LoadScene("SC Demo");
         }
         else
         {
@@ -102,28 +102,16 @@ public class BarFightScene : MonoBehaviour
     //this function is for the flight option and tells the game what to do when fight is picked
     public void FlightPicked()
     {
-        if (currentBlock == block11 || currentBlock == block9 || currentBlock == block10)
+        if (currentBlock == block13)
         {
-            //display current block
-            DisplayBlock(currentBlock.flightBlock);
-            //start coroutine to start fight
-            StartCoroutine(FightTime());
+            //turn true to show thar the dialogue is done
+            dialogueCompleted = true;
+            //start fight scene
+            SceneManager.LoadScene("SC Demo");
         }
         else { 
             DisplayBlock(currentBlock.flightBlock);//go to the block disignated by the flight option
         }
-    }
-
-    //starts fight scene
-    private IEnumerator FightTime()
-    {
-        //wait for 5 seconds to let player read displayed
-        yield return new WaitForSeconds(5);
-
-        //turn true to show thar the dialogue is done
-        dialogueCompleted = true;
-        //start fight scene
-        SceneManager.LoadScene("SC Demo");
     }
 
 }
