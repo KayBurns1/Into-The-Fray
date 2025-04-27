@@ -59,6 +59,7 @@ public class EnemyDamage : MonoBehaviour
             timeToFire = fireRate;
         } else
         {
+            //decrease time until it is time to shoot
             timeToFire -= Time.deltaTime;
         }
     }
