@@ -8,23 +8,24 @@ public class GameOver : MonoBehaviour
 {
     public Button Restart;
     public int highScore;
-    public int currentScore;
     public Text highScoreDisplay;
     public Text currentScoreDisplay;
 
+    public Scoring score;
+
     public void Start()
     {
-        if (currentScore >= highScore)
+        if (score.currentScore >= highScore)
         {
-            highScore = currentScore;
+            highScore = score.currentScore;
             highScoreDisplay.text = "High Score : " + highScore.ToString();
-            currentScoreDisplay.text = "Current Score : " + currentScore.ToString();
-            currentScore = 0;
+            currentScoreDisplay.text = "Current Score : " + score.currentScore.ToString();
+            score.currentScore = 0;
         } else
         {
             highScoreDisplay.text = "High Score : " + highScore.ToString();
-            currentScoreDisplay.text = "Current Score : " + currentScore.ToString();
-            currentScore = 0;
+            currentScoreDisplay.text = "Current Score : " + score.currentScore.ToString();
+            score.currentScore = 0;
         }
     }
 
