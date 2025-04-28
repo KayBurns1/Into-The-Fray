@@ -45,4 +45,3 @@ public class EnemyHealth : MonoBehaviour
 <<<<<<< HEAD
     }*/
 }
->>>>>>> f52b7056126ef0ff21bf34a77c034b6316bcad93
