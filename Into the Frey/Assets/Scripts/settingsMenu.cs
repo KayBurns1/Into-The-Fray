@@ -29,11 +29,11 @@ public class SettingsMenu : MonoBehaviour
     {
         if(mute)
         {
-            AudioListener.volume = 0;
+            AudioListener.volume = -80;
         }
         else
         {
-            AudioListener.volume = 1;
+            AudioListener.volume = 0;
         }
     }
 }
