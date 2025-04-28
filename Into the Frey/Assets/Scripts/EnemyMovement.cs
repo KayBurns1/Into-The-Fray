@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
     //distance between player and enemy for enemy to start attacking
     public float distanceBetween;
     //var to keep track of distance between the player and enemy
-    private float distance;
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
