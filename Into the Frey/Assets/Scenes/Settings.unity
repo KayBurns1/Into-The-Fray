@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181875273}
   - component: {fileID: 181875272}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,12 +145,12 @@ AudioSource:
   m_GameObject: {fileID: 181875271}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 0bb1e720935184b5ebef4821592e3fa3,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ee16e9ac9d06a422899fa9070e47334b,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 1ad36de7b954448ee922dda6ceda6e2f, type: 3}
   m_Resource: {fileID: 8300000, guid: 1ad36de7b954448ee922dda6ceda6e2f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -459,6 +459,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 349976585}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &349976587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5692015377535017466, guid: 6b4aaa8f02b3e6d47b341f16af1fade4,
+    type: 3}
+  m_PrefabInstance: {fileID: 349976585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &406772272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1027,7 @@ GameObject:
   - component: {fileID: 1327922004}
   m_Layer: 5
   m_Name: Volume Slider
-  m_TagString: Untagged
+  m_TagString: volumeSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,10 +1098,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1904231742}
   m_HandleRect: {fileID: 406772273}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1210,8 +1222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66ff99b6f24242b79153cbc23a0af4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 0bb1e720935184b5ebef4821592e3fa3, type: 2}
-  menu: {fileID: 0}
+  mixer: {fileID: 24100000, guid: ee16e9ac9d06a422899fa9070e47334b, type: 2}
+  menu: {fileID: 349976587}
+  volumeSlider: {fileID: 1327922004}
 --- !u!1 &1883210576
 GameObject:
   m_ObjectHideFlags: 0

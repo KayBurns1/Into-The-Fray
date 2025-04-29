@@ -6,6 +6,7 @@ TagManager:
   tags:
   - meleeSwarmer
   - rangedSwarmer
+  - volumeSlider
   layers:
   - Default
   - TransparentFX
