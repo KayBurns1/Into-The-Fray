@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 024a13c49c5f5499193c253c76dd63d7
+guid: c6d1eb6e28c7b1b4a8f337728fe54033
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2408734651867548559
-    second: rangedIdle1_0
+      213: 6247278246563767532
+    second: Ruffian_Idle_Ranged_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rangedIdle1_0
+      name: Ruffian_Idle_Ranged_2_0
       rect:
         serializedVersion: 2
         x: 22
         y: 2
         width: 71
-        height: 95
+        height: 92
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8b4db2676b8d6120800000000000000
-      internalID: 2408734651867548559
+      spriteID: ce4657b377ac2b650800000000000000
+      internalID: 6247278246563767532
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rangedIdle1_0: 2408734651867548559
+      Ruffian_Idle_Ranged_2_0: 6247278246563767532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
