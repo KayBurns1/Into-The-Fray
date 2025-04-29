@@ -19105,6 +19105,7 @@ MonoBehaviour:
   player: {fileID: 1901414972}
   speed: 1
   distanceBetween: 1000
+  distance: 0
 --- !u!70 &1188592816
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -27251,7 +27252,8 @@ AudioSource:
   m_GameObject: {fileID: 1464334800}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0bb1e720935184b5ebef4821592e3fa3,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: f8515c6cc9c9f46d19778f600fb079c0, type: 3}
   m_Resource: {fileID: 8300000, guid: f8515c6cc9c9f46d19778f600fb079c0, type: 3}
   m_PlayOnAwake: 1
@@ -32550,6 +32552,7 @@ MonoBehaviour:
   player: {fileID: 1901414972}
   speed: 1
   distanceBetween: 1000
+  distance: 0
 --- !u!50 &1855520462
 Rigidbody2D:
   serializedVersion: 5
@@ -35467,7 +35470,7 @@ PrefabInstance:
     - target: {fileID: 5032987522813978243, guid: 1198ad7c4efea44b9a4347513a3b72f0,
         type: 3}
       propertyPath: speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5032987522813978243, guid: 1198ad7c4efea44b9a4347513a3b72f0,
         type: 3}
@@ -35482,7 +35485,7 @@ PrefabInstance:
     - target: {fileID: 5032987522813978243, guid: 1198ad7c4efea44b9a4347513a3b72f0,
         type: 3}
       propertyPath: projectileLife
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5753040901425843400, guid: 1198ad7c4efea44b9a4347513a3b72f0,
         type: 3}
