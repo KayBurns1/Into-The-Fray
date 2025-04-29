@@ -32,8 +32,8 @@ public class EnemyHealth : MonoBehaviour
         {
             //maybe play death animation????
             Destroy(gameObject);
-            score.currentScore += 1;
-            Debug.Log($"Current Score: {score.currentScore}");
+            //score.currentScore += 1;
+            //Debug.Log($"Current Score: {score.currentScore}");
             return;
         }
     }
