@@ -1,23 +1,15 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class healthDropChest : MonoBehaviour, IInteractable
 {
     public bool IsOpened { get; private set; }
     public string ChestID { get; private set; }
     public GameObject itemPrefab;
-    public Sprite closedSprite;
     public Sprite openedSprite;
-    public float resetTime = 10f;
-
-    private SpriteRenderer spriteRenderer;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ChestID ??= GlobalHelper.GenerateUniqueID(gameObject);
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public bool CanInteract()
@@ -35,26 +27,19 @@ public class healthDropChest : MonoBehaviour, IInteractable
     {
         SetOpened(true);
 
-        if (itemPrefab)
+        if(itemPrefab)
         {
-            Instantiate(itemPrefab, transform.position + Vector3.down, Quaternion.identity);
+            GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.down, Quaternion.identity);
+           // droppedItem.GetComponent<BounceEffect>().StartBounce();
         }
-
-        StartCoroutine(ResetChestAfterDelay());
     }
 
     public void SetOpened(bool opened)
     {
         IsOpened = opened;
-        if(spriteRenderer != null)
+        if(IsOpened = opened)
         {
-            spriteRenderer.sprite = opened ? openedSprite : closedSprite;
+            GetComponent<SpriteRenderer>().sprite = openedSprite;
         }
-    }
-
-    private IEnumerator ResetChestAfterDelay()
-    {
-        yield return new WaitForSeconds(resetTime);
-        SetOpened(false);
     }
 }

@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-//using Unity.PlasticSCM.Editor.WebApi;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -32,8 +32,8 @@ public class EnemyHealth : MonoBehaviour
         {
             //maybe play death animation????
             Destroy(gameObject);
-            //score.currentScore += 1;
-            //Debug.Log($"Current Score: {score.currentScore}");
+            score.currentScore += 1;
+            Debug.Log($"Current Score: {score.currentScore}");
             return;
         }
     }

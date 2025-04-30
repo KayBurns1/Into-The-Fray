@@ -13,11 +13,7 @@ public class InteractionDetector : MonoBehaviour
     {
         interactionIcon.SetActive(false);
     }
-    void Update()
-    {
-        OnInteract();
-    }
-    
+
     public void OnInteract()
     {
         if (Input.GetKey(KeyCode.E))
