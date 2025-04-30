@@ -4,63 +4,36 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    //enemy objects
-    [SerializeField]
-    private GameObject swordSwarmer;
-    [SerializeField]
-    private GameObject rangedSwarmer;
-
-    //player target
-    public Transform target;
-
-    //how much damage can be done
-    public int damage;
-    //reference to player health
+    public int damage = 1;
     public Health playerHealth;
 
-    //reference to enemy movement
-    public EnemyMovement movement;
+    [Header("Sound Effect")]
+    public AudioClip hitSound;
+    [Range(0f, 1f)]
+    public float volume = 1f;
 
-    //how often range enemy shoots
-    public float fireRate;
-    //var to keep track of when the range enemy can shoot
-    public float timeToFire;
+    private AudioSource audioSource;
 
-    //idk i forgor
-    public Transform fireingPoint;
-
-    private void Update()
+    void Awake()
     {
-        //shoot if enemy is rangedSwarmer
-        if (rangedSwarmer)
-        {
-            Shoot();
-        }
+        audioSource = GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //collide and cause damage if swordSwarmer collides with player
-        if (swordSwarmer)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.tag == "Player")
-            {
-                playerHealth.TakeDamage(damage);
-            }
-        }
-    }
+            playerHealth.TakeDamage(damage);
 
-    private void Shoot()
-    {
-        //shoot when time or else subtract
-        if (timeToFire <= 0f)
-        {
-            //shoot
-            timeToFire = fireRate;
-        } else
-        {
-            //decrease time until it is time to shoot
-            timeToFire -= Time.deltaTime;
+            if (hitSound != null)
+            {
+                audioSource.PlayOneShot(hitSound, volume);
+            }
+            else
+            {
+                Debug.LogWarning("No hitSound assigned on EnemyDamage script.");
+            }
         }
     }
 
