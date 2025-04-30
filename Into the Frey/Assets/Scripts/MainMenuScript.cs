@@ -39,7 +39,7 @@ public class MainMenuScript : MonoBehaviour
     public void Controls()
     {
         //load controls scene
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(5);
     }
 
     public void Menu()

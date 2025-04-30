@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
         {
             //dead
             //play death animation
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(4);
         }
     }
 
