@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 //using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class Health : MonoBehaviour
         {
             //dead
             //play death animation
-            //show game over screen?????
+            SceneManager.LoadScene(5);
         }
     }
 

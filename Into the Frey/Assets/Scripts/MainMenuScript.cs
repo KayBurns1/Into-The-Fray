@@ -22,19 +22,19 @@ public class MainMenuScript : MonoBehaviour
     public void Start()
     {
         //update the current score to be 0
-        //score.currentScore = 0;
+        score.currentScore = 0;
     }
     //play function
     public void Play()
     {
         //load main game scene
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     //settings function
     public void Settings()
     {
         //load settings scene
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene(1);
     }
 }

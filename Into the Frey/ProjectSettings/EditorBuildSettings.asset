@@ -9,16 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 590f605fed1463043828134c464ad21f
   - enabled: 1
-    path: Assets/Scenes/SC Demo.unity
-    guid: 86e89bd9e4a9c5245a015cf17e3c0aae
+    path: Assets/Scenes/Settings.unity
+    guid: 70493e814603e4fb79c84d738ef5383a
   - enabled: 1
     path: Assets/Scenes/BarFight.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    guid: ba25074f8be984c33b759b052544a169
+  - enabled: 1
+    path: Assets/Scenes/SC Demo.unity
+    guid: 86e89bd9e4a9c5245a015cf17e3c0aae
   - enabled: 1
     path: Assets/Scenes/PauseMenu.unity
     guid: 48a1b0ccff77047c88b6d6a3afb099ba
   - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: 70493e814603e4fb79c84d738ef5383a
+    path: Assets/Scenes/GameOver.unity
+    guid: e1cae6ef03bb04f9b85874e457e46f5d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
