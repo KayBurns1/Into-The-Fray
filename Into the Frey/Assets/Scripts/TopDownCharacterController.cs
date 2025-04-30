@@ -33,11 +33,6 @@ using UnityEngine.SceneManagement;
             }
 
             animator.SetBool("IsMoving", moveDir.magnitude > 0);
-
-            if (Input.GetKey(KeyCode.Escape))
-            {
-                SceneManager.LoadScene("PauseMenu");
-            }
         }
 
         void HandleInput()
