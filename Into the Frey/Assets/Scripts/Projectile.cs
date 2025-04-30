@@ -43,7 +43,7 @@ public class Projectile : MonoBehaviour
         moveDirection = direction.normalized;
     }
 
-  private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
         if (enemyHealth != null)

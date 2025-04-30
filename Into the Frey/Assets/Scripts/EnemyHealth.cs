@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
 
-    public Scoring score;
+    public ScoreManager score;
 
     
     // Start is called before the first frame update
@@ -22,17 +22,13 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-        /*if (FloatingText != null)
-        {
-            ShowFloatingText();
-        }*/
-
+        Debug.Log($"Damage: {currentHealth} - {damage}");
+      
         if (currentHealth <= 0)
         {
             //maybe play death animation????
             Destroy(gameObject);
-            //score.currentScore += 1;
+            score.currentScore += 1;
             //Debug.Log($"Current Score: {score.currentScore}");
             return;
         }

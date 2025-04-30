@@ -169,4 +169,4 @@ MonoBehaviour:
   projectileRb: {fileID: 2888131326651100122}
   speed: 5
   projectileLife: 2
-  projectileCount: 0
+  damage: 24

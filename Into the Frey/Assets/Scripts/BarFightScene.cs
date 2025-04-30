@@ -14,7 +14,6 @@ class StoryBlock
     public StoryBlock fightBlock;
     public StoryBlock actionBlock;
     public StoryBlock flightBlock;
-    public PauseMenu isPaused;
 
     //declare the function that actually prints the story to the screen
     public StoryBlock(string barDialogue, StoryBlock flightBlock = null, StoryBlock actionBlock = null, StoryBlock fightBlock = null)
@@ -80,7 +79,6 @@ public class BarFightScene : MonoBehaviour
             dialogueCompleted = true;
             //start fight scene
             SceneManager.LoadScene(3);
-            isPaused = false;
         }
     }
 
@@ -94,7 +92,6 @@ public class BarFightScene : MonoBehaviour
             dialogueCompleted = true;
             //start fight scene
             SceneManager.LoadScene(3);
-            isPaused = false;
         }
         else
         {
@@ -111,7 +108,6 @@ public class BarFightScene : MonoBehaviour
             dialogueCompleted = true;
             //start fight scene
             SceneManager.LoadScene(3);
-            isPaused = false;
 
         }
         else { 

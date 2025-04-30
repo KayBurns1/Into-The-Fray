@@ -10,8 +10,10 @@ public class MainMenuScript : MonoBehaviour
     public Button play;
     public Button settings;
     public Button quit;
+    public Button controls;
+    public Button menu;
     //reference to the score script
-    public Scoring score;
+    public ScoreManager score;
 
     //quit application function
     public void OnApplicationQuit()
@@ -36,5 +38,16 @@ public class MainMenuScript : MonoBehaviour
     {
         //load settings scene
         SceneManager.LoadScene(1);
+    }
+
+    public void Controls()
+    {
+        //load controls scene
+        SceneManager.LoadScene(6);
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

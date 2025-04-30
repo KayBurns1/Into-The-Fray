@@ -8,25 +8,18 @@ public class GameOver : MonoBehaviour
 {
     public Button Restart;
     public int highScore;
-    public Text highScoreDisplay;
-    public Text currentScoreDisplay;
+    public Text highScoreText;
+    public Text currentScoreText;
 
-    public Scoring score;
+    public ScoreManager score;
 
     public void Start()
     {
-        if (score.currentScore >= highScore)
-        {
-            highScore = score.currentScore;
-            highScoreDisplay.text = "High Score : " + highScore.ToString();
-            currentScoreDisplay.text = "Current Score : " + score.currentScore.ToString();
-            score.currentScore = 0;
-        } else
-        {
-            highScoreDisplay.text = "High Score : " + highScore.ToString();
-            currentScoreDisplay.text = "Current Score : " + score.currentScore.ToString();
-            score.currentScore = 0;
-        }
+            // Ensure high score is updated before displaying
+            ScoreManager.instance.CheckAndSetHighScore();
+
+            currentScoreText.text = $"Score: {ScoreManager.instance.GetScore()}";
+            highScoreText.text = $"High Score: {ScoreManager.instance.GetHighScore()}";
     }
 
     public void Menu()
