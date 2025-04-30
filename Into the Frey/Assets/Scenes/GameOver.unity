@@ -733,8 +733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Restart: {fileID: 780024220}
   highScore: 0
-  highScoreDisplay: {fileID: 625792101}
-  currentScoreDisplay: {fileID: 643444300}
+  highScoreText: {fileID: 625792101}
+  currentScoreText: {fileID: 643444300}
   score: {fileID: 0}
 --- !u!1 &1215407227
 GameObject:

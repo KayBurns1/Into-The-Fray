@@ -11,14 +11,12 @@ public class GameOver : MonoBehaviour
     public Text highScoreText;
     public Text currentScoreText;
 
-    public ScoreManager score;
-
-    public void Start()
+    void Start()
     {
             // Ensure high score is updated before displaying
             ScoreManager.instance.CheckAndSetHighScore();
 
-            currentScoreText.text = $"Score: {ScoreManager.instance.GetScore()}";
+            currentScoreText.text = $"Current Score: {ScoreManager.instance.GetScore()}";
             highScoreText.text = $"High Score: {ScoreManager.instance.GetHighScore()}";
     }
 

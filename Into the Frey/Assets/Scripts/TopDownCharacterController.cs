@@ -69,6 +69,11 @@ using UnityEngine.SceneManagement;
             }
         }
 
+        /*private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Debug.Log("Collided with: " + collision.gameObject.name + " | Tag: " + collision.gameObject.tag + " | Layer: " + LayerMask.LayerToName(collision.gameObject.layer));
+        }*/
+
         IEnumerator Blink(Vector2 direction)
         {
             isBlinking = true;

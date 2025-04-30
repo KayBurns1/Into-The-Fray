@@ -12,24 +12,20 @@ public class MainMenuScript : MonoBehaviour
     public Button quit;
     public Button controls;
     public Button menu;
-    //reference to the score script
-    public ScoreManager score;
-
     //quit application function
     public void OnApplicationQuit()
     {
         //quit game
         Application.Quit();
     }
-    public void Start()
-    {
-        //update the current score to be 0
-        score.currentScore = 0;
-    }
+
     //play function
     public void Play()
     {
-        //load main game scene
+        if (ScoreManager.instance != null)
+        {
+            ScoreManager.instance.ResetScore();
+        }
         SceneManager.LoadScene(2);
     }
 

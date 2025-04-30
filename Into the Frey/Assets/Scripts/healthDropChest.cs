@@ -29,6 +29,7 @@ public class healthDropChest : MonoBehaviour, IInteractable
     {
         if (!CanInteract()) return;
         OpenChest();
+        //Debug.Log("Interacted with chest!");
     }
 
     private void OpenChest()

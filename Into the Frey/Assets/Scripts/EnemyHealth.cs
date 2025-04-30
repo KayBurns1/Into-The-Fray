@@ -5,12 +5,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    //private GameObject FloatingText;
     public int maxHealth;
     public int currentHealth;
-
-    public ScoreManager score;
-
     
     // Start is called before the first frame update
     void Start()
@@ -22,17 +18,20 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"Damage: {currentHealth} - {damage}");
+        //Debug.Log($"Damage: {currentHealth} - {damage}");
       
         if (currentHealth <= 0)
         {
             //maybe play death animation????
             Destroy(gameObject);
-            score.currentScore += 1;
-            //Debug.Log($"Current Score: {score.currentScore}");
-            return;
+            if (ScoreManager.instance != null)
+            {
+                ScoreManager.instance.AddScore(1); //hardcoded to update score instance
+            }
         }
+            return;
     }
+}
 
     /*void ShowFloatingText()
     {
@@ -40,4 +39,3 @@ public class EnemyHealth : MonoBehaviour
         show.GetComponentInChildren<TextMesh>().text = currentHealth.ToString();
 <<<<<<< HEAD
     }*/
-}

@@ -345,6 +345,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &422281487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422281489}
+  - component: {fileID: 422281488}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &422281488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422281487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac7bccf7220bf464ba391beae2051700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+  highScore: 0
+--- !u!4 &422281489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422281487}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.3864083, y: -1.6005666, z: -0.06653268}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627842438
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,8 +983,9 @@ MonoBehaviour:
   play: {fileID: 4576356617923591821}
   settings: {fileID: 6634205441376336119}
   quit: {fileID: 8016185394235080564}
-  controls: {fileID: 0}
-  score: {fileID: 0}
+  controls: {fileID: 1858575086}
+  menu: {fileID: 0}
+  score: {fileID: 422281488}
 --- !u!1 &3016668527312161660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,3 +1590,4 @@ SceneRoots:
   - {fileID: 7566278747953099301}
   - {fileID: 103427916}
   - {fileID: 1977930824}
+  - {fileID: 422281489}

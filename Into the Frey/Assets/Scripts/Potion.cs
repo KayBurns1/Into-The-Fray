@@ -15,6 +15,7 @@ public class PickupPotion : MonoBehaviour
         {
             player.Heal(healAmount);
             Destroy(gameObject); // Destroy the potion after healing
+            //Debug.Log("Destroying: " + gameObject.name);
         }
     }
 }
